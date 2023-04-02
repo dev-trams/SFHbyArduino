@@ -1,5 +1,7 @@
 # SFH V2 축사 시스템 by Arduino
 
+### 이 코드는 농장의 온도와 습도를 측정하여, 농장의 LED 조명 및 팬을 자동으로 제어하는 코드입니다.
+
 ## HTTP.ino
 
 이 코드는 Arduino와 같은 임베디드 시스템에서 HTTP 요청을 보내고 JSON 데이터를 파싱하는 데 사용됩니다. 함수는 WiFiClient 및 HTTPClient 라이브러리를 사용하여 작성되었습니다.
@@ -33,6 +35,23 @@
 - JSON 라이브러리: 이 기능은 JSON 형식의 데이터를 파싱하고 생성할 수 있도록 해줍니다.
 
 - digitalWrite: 이 함수는 LED와 같은 디지털 출력 핀을 제어할 수 있도록 해줍니다.
+
+### 기능
+
+코드 구성 요소
+
+1. void setup() <br> Arduino 보드에서 처음 한번 실행되며, 초기 설정을 수행합니다.
+
+2. void loop() <br> setup() 함수 실행 후, 계속해서 반복적으로 실행됩니다.
+온도와 습도를 측정하고, LED와 팬을 제어하는 코드를 포함합니다.
+
+3. float readDHTTemperature() <br> DHT11 센서를 통해 온도를 측정하는 함수입니다. <br> 반환 값은 측정된 온도값입니다.
+
+4. float readDHTHumidity() <br> DHT11 센서를 통해 습도를 측정하는 함수입니다. <br> 반환 값은 측정된 습도값입니다.
+
+5. String LEDBarn(float h ,float hs ,float t , float ts) <br> LED 조명의 On/Off 여부를 결정하는 함수입니다. <br> h : 현재 습도 값, hs : 습도 센서에서 정한 경계 값, t : 현재 온도 값, ts : 온도 센서에서 정한 경계 값 <br> 습도 값이 정한 경계 값보다 작으면 LED가 켜집니다. <br> 온도 값이 정한 경계 값보다 크면 LED가 켜집니다. <br> 반환 값은 LED 조명 On/Off 여부를 나타내는 문자열입니다.
+
+6. String PANBarn(float h,float hs ,float t , float ts, int PANYN) <br> 팬의 On/Off 여부를 결정하는 함수입니다. <br> h : 현재 습도 값, hs : 습도 센서에서 정한 경계 값, t : 현재 온도 값, ts : 온도 센서에서 정한 경계 값, PANYN : 팬 On/Off 여부를 나타내는 변수 (1 : On, 0 : Off) <br> 습도 값이 정한 경계 값보다 크면 팬이 켜집니다. <br> 온도 값이 정한 경계 값보다 크면 팬이 켜집니다. <br> PANYN 변수가 1이면 팬이 항상 켜집니다. <br> 반환 값은 팬 On/Off 여부를 나타내는 문자열입니다.
 
 ## WHERE.ino
 
