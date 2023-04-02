@@ -51,7 +51,7 @@
 
 5. String LEDBarn(float h ,float hs ,float t , float ts) <br> LED 조명의 On/Off 여부를 결정하는 함수입니다. <br> h : 현재 습도 값, hs : 습도 센서에서 정한 경계 값, t : 현재 온도 값, ts : 온도 센서에서 정한 경계 값 <br> 습도 값이 정한 경계 값보다 작으면 LED가 켜집니다. <br> 온도 값이 정한 경계 값보다 크면 LED가 켜집니다. <br> 반환 값은 LED 조명 On/Off 여부를 나타내는 문자열입니다.
 
-6. String PANBarn(float h,float hs ,float t , float ts, int PANYN) <br> 팬의 On/Off 여부를 결정하는 함수입니다. <br> h : 현재 습도 값, hs : 습도 센서에서 정한 경계 값, t : 현재 온도 값, ts : 온도 센서에서 정한 경계 값, PANYN : 팬 On/Off 여부를 나타내는 변수 (1 : On, 0 : Off) <br> 습도 값이 정한 경계 값보다 크면 팬이 켜집니다. <br> 온도 값이 정한 경계 값보다 크면 팬이 켜집니다. <br> PANYN 변수가 1이면 팬이 항상 켜집니다. <br> 반환 값은 팬 On/Off 여부를 나타내는 문자열입니다.
+6. String PANBarn(float h,float hs ,float t , float ts, int PANYN) <br> 팬의 On/Off 여부를 결정하는 함수입니다. <br> h : 현재 습도 값, hs : 습도 센서에서 정한 경계 값, t : 현재 온도 값, <br> ts : 온도 센서에서 정한 경계 값, PANYN : 팬 On/Off 여부를 나타내는 변수 (1 : On, 0 : Off) <br> 습도 값이 정한 경계 값보다 크면 팬이 켜집니다. <br> 온도 값이 정한 경계 값보다 크면 팬이 켜집니다. <br> PANYN 변수가 1이면 팬이 항상 켜집니다. <br> 반환 값은 팬 On/Off 여부를 나타내는 문자열입니다.
 
 ## WHERE.ino
 
