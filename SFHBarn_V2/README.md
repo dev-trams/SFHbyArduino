@@ -13,7 +13,7 @@
 - parseJSON 함수는 Readings 문자열과 ReadingsArr 배열을 매개 변수로 받습니다. 이 함수는 JSON.parse() 함수를 사용하여 JSON 문자열을 객체로 변환합니다. 변환된 객체를 사용하여 ReadingsArr 배열에 데이터를 저장합니다. 이 때, value1, value2 등과 같이 key값을 사용하여 JSON 객체의 값을 읽어오며, 이를 double 형식으로 변환하여 배열에 저장합니다.
 
 
-## [SFHBarn.ino](https://github.com/dev-trams/SFHbyArduino/blob/master/SFHBarn_V2/SFHBarn.ino)
+## [SFHBarn.ino](https://github.com/dev-trams/SFHbyArduino/blob/master/SFHBarn_V2/SFHBarn_V2.ino)
 
 이 코드는 SFH의 메인 컨트롤러중 하나인 축사 컨트롤러의 ESP8266 마이크로컨트롤러를 사용하여 다양한 축사 시스템에 내장된 센서들을 활용하고, 와이파이를 통해 웹서버와 통신하는 IoT 기기의 메인 코드입니다.
 코드의 주요 기능은 다음과 같습니다.
